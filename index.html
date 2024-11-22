@@ -3,141 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak - IoT Developer & Software Engineer</title>
+    <title>Deepak - Professional Resume</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --background-color: #f5f6fa;
-            --text-color: #2c3e50;
-            --accent-color: #e74c3c;
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--background-color);
-            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+            color: var(--text-color);
         }
 
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 40px 0;
+            padding: 2rem 1rem;
             text-align: center;
-            margin-bottom: 30px;
         }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .contact-info {
-            margin-top: 15px;
-        }
-
-        .section {
             background: white;
-            padding: 25px;
-            margin-bottom: 25px;
+            padding: 1rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: -2rem auto 2rem;
+            max-width: 600px;
+            text-align: center;
         }
 
-        .section:hover {
-            transform: translateY(-5px);
+        section {
+            padding: 2rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
 
         h2 {
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--secondary-color);
-        }
-
-        .education-item, .project-item, .certification-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            background-color: #f8f9fa;
-        }
-
-        .education-item h3, .project-item h3, .certification-item h3 {
             color: var(--primary-color);
-            margin-bottom: 5px;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
         }
 
-        .institution {
-            color: var(--accent-color);
-            font-weight: 500;
-            margin-bottom: 5px;
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
-        .skill-category {
-            margin-bottom: 15px;
+        .skill-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .skill-category h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
+        .project {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         ul {
             list-style-position: inside;
-            margin-left: 20px;
+            margin-left: 1rem;
         }
 
-        .project-tech {
-            color: var(--secondary-color);
-            font-size: 0.9em;
-            margin-bottom: 5px;
-        }
-
-        .badge {
+        .button {
             display: inline-block;
-            background-color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
             color: white;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            margin: 5px 0;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            header {
-                padding: 20px 0;
-            }
-            
             h1 {
-                font-size: 2em;
+                font-size: 2rem;
             }
             
-            .section {
-                padding: 15px;
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -145,94 +131,100 @@
 <body>
     <header>
         <div class="container">
-            <h1>DEEPAK</h1>
-            <div class="contact-info">
-                <p>Location: Sonipat</p>
-                <p>Email: your.email@example.com</p>
-                <p>Phone: +91 XXXXXXXXXX</p>
-            </div>
+            <h1>Deepak</h1>
+            <p>Software Developer & IoT Specialist</p>
         </div>
     </header>
 
-    <div class="container">
-        <section class="section">
+    <div class="contact-info">
+        <p>📱 7404832473</p>
+        <p>📧 mrhardik002@gmail.com</p>
+        <p>🏢 Founder & Owner - Sun Solution</p>
+    </div>
+
+    <main class="container">
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Experienced electronics and computer science professional specializing in IoT development, web applications, and hardware engineering. Founder of Sun Solution, delivering innovative technical solutions.</p>
+        </section>
+
+        <section>
             <h2>Education</h2>
-            <div class="education-item">
-                <h3>B.Tech in Computer Science Engineering</h3>
-                <p class="institution">SRM University, Delhi NCR</p>
+            <div class="project">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <p>SRM University, Delhi NCR</p>
             </div>
-            <div class="education-item">
+            <div class="project">
                 <h3>Diploma in Electronics and Communication Engineering</h3>
-                <p class="institution">Government Polytechnic College</p>
-                <p>Comprehensive training in electronics and communication systems</p>
+                <p>Government Polytechnic Institute, Sonipat</p>
+            </div>
+            <div class="project">
+                <h3>Secondary Education</h3>
+                <p>Lord Krishna Public School</p>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Certifications</h2>
-            <div class="certification-item">
-                <h3>Technical Certification</h3>
-                <p class="institution">Infosys Technology</p>
-                <div class="badge">Industry Recognition</div>
-                <p>Professional certification demonstrating expertise in technology and software development</p>
-            </div>
-        </section>
-
-        <section class="section">
+        <section>
             <h2>Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                <div class="skill-card">
+                    <h3>Programming</h3>
                     <ul>
+                        <li>Python</li>
                         <li>C</li>
                         <li>Java</li>
-                        <li>Python</li>
-                        <li>HTML</li>
+                        <li>HTML/CSS</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>IoT Development</h3>
+                <div class="skill-card">
+                    <h3>Microcontrollers</h3>
                     <ul>
                         <li>Arduino</li>
+                        <li>STM32</li>
                         <li>ESP32</li>
                         <li>ESP8266</li>
-                        <li>Ultrasonic Sensors</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Development</h3>
+                <div class="skill-card">
+                    <h3>Hardware</h3>
                     <ul>
-                        <li>Web Development</li>
-                        <li>E-commerce</li>
-                        <li>Android Applications</li>
+                        <li>PCB Design</li>
+                        <li>SMD Soldering</li>
+                        <li>Circuit Design</li>
+                        <li>IoT Integration</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Smart Home Automation System</h3>
-                <p class="project-tech">Technology: ESP8266, IoT, Mobile App Integration</p>
+        <section>
+            <h2>Professional Experience</h2>
+            <div class="project">
+                <h3>Sun Solution - Founder & Owner</h3>
                 <ul>
-                    <li>Developed comprehensive home automation system</li>
-                    <li>Implemented remote control of home appliances</li>
-                    <li>Created real-time device status monitoring</li>
-                    <li>Integrated Wi-Fi based communication system</li>
-                </ul>
-            </div>
-            <div class="project-item">
-                <h3>Distance Measurement System</h3>
-                <p class="project-tech">Technology: Arduino, Ultrasonic Sensor</p>
-                <ul>
-                    <li>Designed precise distance measurement system</li>
-                    <li>Implemented real-time distance measurement and display</li>
-                    <li>Achieved high accuracy with ±1cm error margin</li>
-                    <li>Integrated digital display for readings</li>
+                    <li>Developed custom web and mobile applications</li>
+                    <li>Created "My Jio" application clone</li>
+                    <li>Led IoT-based project developments</li>
+                    <li>Managed full-stack development projects</li>
                 </ul>
             </div>
         </section>
-    </div>
+
+        <section>
+            <h2>Notable Projects</h2>
+            <div class="project">
+                <h3>Temperature & Humidity Monitoring System</h3>
+                <p>Developed a complete IoT solution with mobile application integration for real-time environmental monitoring.</p>
+            </div>
+            <div class="project">
+                <h3>Web Development Portfolio</h3>
+                <p>Created responsive websites and full-stack applications for various clients using modern technologies.</p>
+            </div>
+            <div class="project">
+                <h3>IoT Solutions</h3>
+                <p>Designed and implemented custom IoT solutions using various microcontrollers and sensors.</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
