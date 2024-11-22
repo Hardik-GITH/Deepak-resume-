@@ -10,6 +10,7 @@
             --secondary-color: #3498db;
             --background-color: #f5f6fa;
             --text-color: #2c3e50;
+            --accent-color: #e74c3c;
         }
 
         * {
@@ -32,7 +33,7 @@
         }
 
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -54,6 +55,11 @@
             margin-bottom: 25px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
         }
 
         h2 {
@@ -63,12 +69,21 @@
             border-bottom: 2px solid var(--secondary-color);
         }
 
-        .education-item, .project-item {
+        .education-item, .project-item, .certification-item {
             margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
         }
 
-        .education-item h3, .project-item h3 {
+        .education-item h3, .project-item h3, .certification-item h3 {
             color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .institution {
+            color: var(--accent-color);
+            font-weight: 500;
             margin-bottom: 5px;
         }
 
@@ -96,6 +111,16 @@
             color: var(--secondary-color);
             font-size: 0.9em;
             margin-bottom: 5px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin: 5px 0;
         }
 
         @media (max-width: 768px) {
@@ -134,10 +159,22 @@
             <h2>Education</h2>
             <div class="education-item">
                 <h3>B.Tech in Computer Science Engineering</h3>
-                <p>SRM University, Delhi NCR</p>
+                <p class="institution">SRM University, Delhi NCR</p>
             </div>
             <div class="education-item">
                 <h3>Diploma in Electronics and Communication Engineering</h3>
+                <p class="institution">Government Polytechnic College</p>
+                <p>Comprehensive training in electronics and communication systems</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Certifications</h2>
+            <div class="certification-item">
+                <h3>Technical Certification</h3>
+                <p class="institution">Infosys Technology</p>
+                <div class="badge">Industry Recognition</div>
+                <p>Professional certification demonstrating expertise in technology and software development</p>
             </div>
         </section>
 
